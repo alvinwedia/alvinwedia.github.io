@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | PORSCHE 911 GT3</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Metropolis:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "inverse-primary": "#5e5e5e",
+                        "surface-bright": "#393939",
+                        "secondary-fixed-dim": "#c4c7c8",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#410003",
+                        "surface-container": "#20201f",
+                        "primary-container": "#000000",
+                        "surface-dim": "#131313",
+                        "secondary": "#c4c7c8",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#b6b9ba",
+                        "on-tertiary": "#680008",
+                        "outline-variant": "#4c4546",
+                        "surface-tint": "#c6c6c6",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#988e90",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#444748",
+                        "on-primary": "#303030",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-container": "#000000",
+                        "on-tertiary-fixed-variant": "#930010",
+                        "primary": "#c6c6c6",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#e71a26",
+                        "tertiary-fixed-dim": "#ffb3ac",
+                        "surface-container-highest": "#353535",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#191c1d",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-variant": "#353535",
+                        "secondary-fixed": "#e0e3e4",
+                        "on-secondary": "#2d3132",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffb3ac",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-container": "#757575",
+                        "secondary-container": "#464a4b",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "stats-number": ["Metropolis"],
+                        "display-xl": ["Metropolis"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg-mobile": ["Metropolis"],
+                        "headline-lg": ["Metropolis"],
+                        "body-lg": ["Inter"],
+                        "subheading": ["Metropolis"]
+                    },
+                    "fontSize": {
+                        "stats-number": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "subheading": ["18px", { "lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-hud {
+            backdrop-filter: blur(20px);
+            background-color: rgba(196, 199, 200, 0.05); /* Very subtle silver tint */
+        }
+        .ghost-border {
+            border: 1px solid rgba(166, 169, 170, 0.2);
+        }
+        .carbon-texture {
+            background-image: radial-gradient(#333 1px, transparent 1px), radial-gradient(#333 1px, transparent 1px);
+            background-size: 10px 10px;
+            background-position: 0 0, 5px 5px;
+            background-color: var(--color-surface-dim);
+        }
+        /* Custom scrollbar for raw mechanical feel */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--color-background); }
+        ::-webkit-scrollbar-thumb { background: var(--color-outline-variant); border-radius: 0; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--color-on-tertiary-container); }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden selection:bg-on-tertiary-container selection:text-white transition-colors duration-300">
+<!-- TopAppBar -->
+<header class="bg-secondary-container/90 dark:bg-surface-container-high/90 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 flat no shadows h-12 transition-colors duration-300">
+<div class="flex justify-between items-center px-gutter py-unit*4 max-w-container-max mx-auto h-full">
+<div class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-on-surface dark:text-primary transition-colors duration-300">
+                PORSCHE 911 GT3
+            </div>
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 duration-300" href="services.html">Services</a>
+<a class="text-on-surface border-b-2 border-on-tertiary-container pb-1 font-label-caps text-label-caps" href="about.html">About Us</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 duration-300" href="contact.html">Contact</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 duration-300" href="signin.html">Sign In</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 duration-300" href="signup.html">Sign Up</a>
+</nav>
+<div class="flex items-center gap-4">
+<div class="hidden md:flex flex-col items-end text-on-surface-variant font-label-caps text-label-caps" id="real-time-clock">
+<span>--:--:--</span>
+</div>
+<button class="text-primary dark:text-on-surface hover:text-on-tertiary-container transition-colors p-2 active:scale-95 duration-200" id="dark-mode-toggle">
+<span class="material-symbols-outlined" data-icon="dark_mode" id="dark-mode-icon">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section - Cinematic Zoom -->
+<section class="relative h-[819px] w-full overflow-hidden flex items-end pb-24 group">
+<img alt="Heritage" class="absolute inset-0 w-full h-full object-cover transition-transform duration-[10s] group-hover:scale-105" data-alt="A cinematic, low-angle shot of a classic Porsche 911 GT3 on a desolate, misty race track at dawn. The lighting is dramatic, with long shadows and a cool, cinematic teal and orange color grade. The car's aggressive aerodynamic profile is highlighted against the soft, moody sky. High contrast, sharp details, emphasizing precision engineering and motorsport heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWEUblBQEwKF6hm1gwqrUwm1SkADKissf5UVClULDPxo24HcapNh84LHOTXnMRzK0Z2HPL-3UFDv5eEiiWwSCam0kNtTo6ZFjU2vCsAsIepttuaqWpiDjuyfzz4Wj4Orf6jkThJ2GrnWehJHMxESo8fic1JDocrZQZc-qlq74cfL5nlKMWQ9ILA8kF0nrzA-adRQmMjqYDy7OkSumckE6EfXuPj1K0da9bMGS7lgXGdT9wct78z3Jnlnqve5CxvsaYjLmHY0rbMdo"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent transition-colors duration-300"></div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<p class="font-label-caps text-label-caps text-on-tertiary-container mb-4 uppercase tracking-widest transition-colors duration-300">Motorsport Heritage</p>
+<h1 class="font-display-xl text-display-xl text-on-surface mb-6 transition-colors duration-300">FORGED IN<br/>THE CRUCIBLE.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl transition-colors duration-300">
+                        Since 1999, the GT3 designation has stood as the ultimate expression of naturally aspirated performance. Born on the track, unleashed on the road.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Stacking Editorial Cards: Vision & Mission -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Side Panel: Stats (Asymmetric layout) -->
+<div class="md:col-span-4 space-y-4 hidden md:block">
+<div class="glass-hud ghost-border p-6 h-full transition-colors duration-300">
+<h3 class="font-label-caps text-label-caps text-outline mb-8 transition-colors duration-300">Telemetry</h3>
+<div class="space-y-6">
+<div class="border-b border-outline-variant/30 pb-4 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">YEAR OF INCEPTION</p>
+<p class="font-stats-number text-stats-number text-on-surface transition-colors duration-300">1999</p>
+</div>
+<div class="border-b border-outline-variant/30 pb-4 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">MAX RPM LIMIT</p>
+<p class="font-stats-number text-stats-number text-on-surface transition-colors duration-300">9,000</p>
+</div>
+<div class="border-b border-outline-variant/30 pb-4 transition-colors duration-300">
+<p class="font-label-caps text-label-caps text-on-surface-variant transition-colors duration-300">RING TIME (992)</p>
+<p class="font-stats-number text-stats-number text-on-surface transition-colors duration-300">6:59.927</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content: Bento Grids for Vision/Mission -->
+<div class="md:col-span-8 space-y-gutter">
+<!-- Vision Card -->
+<div class="glass-hud ghost-border p-8 md:p-12 relative overflow-hidden group transition-colors duration-300">
+<div class="absolute top-0 right-0 w-32 h-32 bg-on-tertiary-container/10 blur-3xl -mr-10 -mt-10 rounded-full transition-all duration-700 group-hover:scale-150"></div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 relative z-10 transition-colors duration-300">THE VISION.</h2>
+<div class="w-12 h-1 bg-on-tertiary-container mb-6 relative z-10 transition-colors duration-300"></div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-2xl relative z-10 transition-colors duration-300">
+                            To create the purest connection between machine and driver. Our vision is not merely speed, but the tactile, visceral emotion of mechanical precision. We strip away the unnecessary, focusing only on elements that enhance the driving experience. The GT3 is an analog soul in a digital world.
+                        </p>
+</div>
+<!-- Mission Card - Carbon Textured -->
+<div class="carbon-texture ghost-border p-8 md:p-12 relative transition-colors duration-300">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-4 transition-colors duration-300">THE MISSION.</h2>
+<div class="w-12 h-1 bg-on-surface-variant mb-6 transition-colors duration-300"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed transition-colors duration-300">
+                                    To transfer motorsport technology directly to the street with zero compromise. We engineer every component—from the double-wishbone front axle to the swan-neck rear wing—to deliver race-proven aerodynamics and dynamics to enthusiasts.
+                                </p>
+</div>
+<div class="flex flex-col justify-end">
+<img alt="Engineering detail" class="w-full h-48 object-cover ghost-border grayscale hover:grayscale-0 transition-all duration-500" data-alt="A close-up, high-contrast monochrome image of a Porsche 911 GT3 engine bay or suspension component. The lighting highlights the machined aluminum and carbon fiber textures, emphasizing technical precision and mechanical complexity. The mood is industrial, sterile, and focused on pure engineering excellence. Dark background with bright, reflective highlights on the metal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEPeKMLDicEnGhbpigGFu69nwnnwlSVifFMwUTa2w8-O55aQiQdxAtCLFL6iPnmiCSbvvGFT7sTsdVSJws6K41DieYmbQsiIiub2duL7lEqMJNsv5djC3H6vQMtIhKUSAoRiZBBTzFeveaUcxAbL17zyrsGeEi9yf5dRG-Mf9HPBc7EqDANX5Ji0bnyilGI391ozpdYdP_BhtmByxCoVRSxCU-UXn9r-vTtsCekBntQ4FrvE_NE3tApbGlHU4PefXY8qKPanB66zE"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-black full-width relative border-t border-outline-variant/30 flat transition-colors duration-300">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-20 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-lg text-headline-lg text-on-surface transition-colors duration-300">PORSCHE 911 GT3</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-auto uppercase transition-colors duration-300">© 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="grid grid-cols-2 gap-4 col-span-2">
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">About the GT3</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Quick Links</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Motorsport Heritage</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Legal Notice</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Cookie Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll to top functionality for footer links
+        document.querySelectorAll('footer a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Dark Mode Toggle Logic
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const darkModeIcon = document.getElementById('dark-mode-icon');
+        const htmlElement = document.documentElement;
+
+        function updateDarkModeIcon() {
+            if (htmlElement.classList.contains('dark')) {
+                darkModeIcon.textContent = 'light_mode';
+            } else {
+                darkModeIcon.textContent = 'dark_mode';
+            }
+        }
+
+        darkModeToggle.addEventListener('click', () => {
+            htmlElement.classList.toggle('dark');
+            updateDarkModeIcon();
+        });
+
+        // Initialize icon state
+        updateDarkModeIcon();
+
+        // Real-time Clock Logic
+        const clockElement = document.querySelector('#real-time-clock span');
+        
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            if (clockElement) {
+                clockElement.textContent = timeString;
+            }
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Initial call
+    </script>
+</body></html>

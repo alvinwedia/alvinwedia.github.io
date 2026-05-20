@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PORSCHE 911 GT3 - Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Metropolis:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#cfc4c5",
+                      "inverse-primary": "#5e5e5e",
+                      "surface-bright": "#393939",
+                      "secondary-fixed-dim": "#c4c7c8",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#410003",
+                      "surface-container": "#20201f",
+                      "primary-container": "#000000",
+                      "surface-dim": "#131313",
+                      "secondary": "#c4c7c8",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#b6b9ba",
+                      "on-tertiary": "#680008",
+                      "outline-variant": "#4c4546",
+                      "surface-tint": "#c6c6c6",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-on-surface": "#313030",
+                      "on-surface": "#e5e2e1",
+                      "outline": "#988e90",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed-variant": "#444748",
+                      "on-primary": "#303030",
+                      "surface": "#131313",
+                      "on-primary-fixed": "#1b1b1b",
+                      "tertiary-container": "#000000",
+                      "on-tertiary-fixed-variant": "#930010",
+                      "primary": "#c6c6c6",
+                      "tertiary-fixed": "#ffdad6",
+                      "on-tertiary-container": "#e71a26",
+                      "tertiary-fixed-dim": "#ffb3ac",
+                      "surface-container-highest": "#353535",
+                      "background": "#131313",
+                      "on-secondary-fixed": "#191c1d",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "surface-variant": "#353535",
+                      "secondary-fixed": "#e0e3e4",
+                      "on-secondary": "#2d3132",
+                      "error-container": "#93000a",
+                      "tertiary": "#ffb3ac",
+                      "surface-container-low": "#1c1b1b",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-container": "#757575",
+                      "secondary-container": "#464a4b",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "stats-number": [
+                              "Metropolis"
+                      ],
+                      "display-xl": [
+                              "Metropolis"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Metropolis"
+                      ],
+                      "headline-lg": [
+                              "Metropolis"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "subheading": [
+                              "Metropolis"
+                      ]
+              },
+              "fontSize": {
+                      "stats-number": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-xl": [
+                              "84px",
+                              {
+                                      "lineHeight": "90px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "subheading": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .carbon-pattern {
+            background-image: 
+                linear-gradient(45deg, rgba(0,0,0,0.8) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.8)), 
+                linear-gradient(45deg, rgba(0,0,0,0.8) 25%, transparent 25%, transparent 75%, rgba(0,0,0,0.8) 75%, rgba(0,0,0,0.8));
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+        }
+        
+        .hud-blur {
+            backdrop-filter: blur(20px);
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(166, 169, 170, 0.2);
+        }
+
+        .glass-panel {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hover-shear:hover {
+            transform: skewX(-5deg) translateX(4px);
+            transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        .racing-red-fill {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .racing-red-fill::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: theme('colors.on-tertiary-container');
+            transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            z-index: 0;
+        }
+        
+        .racing-red-fill:hover::before {
+            transform: translateX(100%);
+        }
+        
+        .racing-red-fill > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Smooth reveal animations */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased selection:bg-on-tertiary-container selection:text-white">
+<!-- TopAppBar JSON Render -->
+<header class="bg-secondary-container/90 dark:bg-surface-container-high/90 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 flat no shadows">
+<div class="flex justify-between items-center px-gutter py-unit*4 max-w-container-max mx-auto h-[48px]">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-on-surface dark:text-primary" href="index.html">
+                PORSCHE 911 GT3
+            </a>
+<!-- Navigation -->
+<nav class="hidden md:flex space-x-8 items-center h-full">
+<a class="text-on-surface-variant text-[12px] font-label-caps hover:text-on-surface transition-colors duration-300 px-1 py-1" href="index.html">Home</a>
+<a class="text-on-surface border-b border-on-tertiary-container text-[12px] font-label-caps transition-colors duration-300 px-1 py-1" href="services.html">Services</a>
+<a class="text-on-surface-variant text-[12px] font-label-caps hover:text-on-surface transition-colors duration-300 px-1 py-1" href="about.html">About Us</a>
+<a class="text-on-surface-variant text-[12px] font-label-caps hover:text-on-surface transition-colors duration-300 px-1 py-1" href="contact.html">Contact</a>
+<a class="text-on-surface-variant text-[12px] font-label-caps hover:text-on-surface transition-colors duration-300 px-1 py-1" href="signin.html">Sign In</a>
+<a class="text-on-surface-variant text-[12px] font-label-caps hover:text-on-surface transition-colors duration-300 px-1 py-1" href="signup.html">Sign Up</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center space-x-4">
+<div class="hidden md:block font-label-caps text-[12px] text-on-surface-variant mr-2" id="clock"></div>
+<button aria-label="dark_mode" class="text-primary dark:text-on-surface hover:bg-on-surface-variant/10 transition-all duration-300 p-2 rounded-full Active: scale-95 transition-transform" id="theme-toggle">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</button>
+<button aria-label="Menu" class="md:hidden text-primary dark:text-on-surface p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col">
+<!-- Hero Section -->
+<section class="relative w-full h-[614px] md:h-[819px] flex items-center overflow-hidden">
+<!-- Background Image -->
+<div class="absolute inset-0 z-0">
+<img alt="Close up of a high performance sports car engine bay, showcasing raw carbon fiber components, intricate metallic engine block details, and precision engineering. The lighting is dramatic and moody, emphasizing the textures of the carbon weave and polished metal. The atmosphere is aggressive, technical, and premium." class="w-full h-full object-cover object-center filter brightness-[0.4]" data-alt="Close up of a high performance sports car engine bay, showcasing raw carbon fiber components, intricate metallic engine block details, and precision engineering. The lighting is dramatic and moody, emphasizing the textures of the carbon weave and polished metal. The atmosphere is aggressive, technical, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfVLvwNbLaVtTdGaWtLS08TcAo6Ftcuj8hrjoHxuY9P5D7ImxquJEloZTUtbqpp8EbUJTfC-gdR5bO0bqzdE3aRzxdionwRjuQFyFTcrxSgq48uSpe_5I3zuMoeTRKl6sbtWNu3Z5RIwFbn8Xt_4cy0f2Y2D1Mrnqj4C_acPZ9w5b1EJOZkVhQE2dXl3H5jb3CjgWer8JtJlyquABixqMAMg6rVLap_Hpx7AYnXME15d3F3QtFWE5ZderDqRT0fqlqXXP43mMxnXY"/>
+<div class="absolute inset-0 carbon-pattern opacity-30 mix-blend-overlay"></div>
+</div>
+<!-- Content -->
+<div class="relative z-10 w-full max-w-container-max mx-auto px-gutter flex flex-col justify-end pb-24 h-full">
+<div class="max-w-3xl reveal-up active">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 tracking-[0.2em]">PORSCHE MOTORSPORT</p>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-on-surface uppercase mb-6 leading-tight">
+                        Precision <br/><span class="text-on-surface-variant/60">Engineering.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        Uncompromising performance demands specialized care. Explore our suite of premium services designed exclusively for the 911 GT3.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Services Section - Asymmetric Bento Grid -->
+<section class="py-[120px] px-gutter w-full max-w-container-max mx-auto relative z-20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Sidebar / Navigation Context -->
+<div class="col-span-1 md:col-span-3 hidden md:flex flex-col space-y-8 sticky top-[120px] h-fit">
+<div class="ghost-border p-6 bg-surface-container-low/50 backdrop-blur-md">
+<h3 class="font-label-caps text-label-caps text-on-surface mb-6 border-b border-outline-variant/30 pb-2">SERVICE CATEGORIES</h3>
+<ul class="space-y-4">
+<li class=""><a class="font-body-md text-on-surface flex items-center justify-between group" href="#customization"><span class="group-hover:text-on-tertiary-container transition-colors">Customization</span> <span class="material-symbols-outlined text-on-surface-variant group-hover:text-on-tertiary-container text-[16px]">chevron_right</span></a></li>
+<li class=""><a class="font-body-md text-on-surface-variant flex items-center justify-between group" href="#track-days"><span class="group-hover:text-on-tertiary-container transition-colors">Track Days</span> <span class="material-symbols-outlined text-on-surface-variant/50 group-hover:text-on-tertiary-container text-[16px]">chevron_right</span></a></li>
+<li class=""><a class="font-body-md text-on-surface-variant flex items-center justify-between group" href="#maintenance"><span class="group-hover:text-on-tertiary-container transition-colors">Precision Maintenance</span> <span class="material-symbols-outlined text-on-surface-variant/50 group-hover:text-on-tertiary-container text-[16px]">chevron_right</span></a></li>
+</ul>
+</div>
+<!-- Telemetry Widget -->
+<div class="glass-panel p-6 carbon-pattern">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant mb-4">GT3 SPECS</h4>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-label-caps text-[10px] text-on-surface-variant/60">POWER</p>
+<p class="font-stats-number text-stats-number text-on-surface">502 <span class="text-[12px] font-normal text-on-surface-variant">HP</span></p>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-on-surface-variant/60">0-60 MPH</p>
+<p class="font-stats-number text-stats-number text-on-surface">3.2 <span class="text-[12px] font-normal text-on-surface-variant">s</span></p>
+</div>
+<div class="col-span-2">
+<p class="font-label-caps text-[10px] text-on-surface-variant/60">TOP TRACK SPEED</p>
+<p class="font-stats-number text-stats-number text-on-surface">197 <span class="text-[12px] font-normal text-on-surface-variant">mph</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Cards -->
+<div class="col-span-1 md:col-span-9 flex flex-col space-y-[80px]">
+<!-- Card 1: Customization (Wide Power Column) -->
+<div class="group relative overflow-hidden ghost-border bg-surface-container-low reveal-up active" id="customization">
+<div class="absolute inset-0 z-0">
+<img alt="A close up shot of a steering wheel and dashboard of a high end sports car. The materials are premium alcantara and carbon fiber, illuminated by soft, moody garage lighting. The focus is on the intricate stitching and precise assembly, conveying a sense of bespoke craftsmanship." class="w-full h-full object-cover object-center filter brightness-[0.5] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A close up shot of a steering wheel and dashboard of a high end sports car. The materials are premium alcantara and carbon fiber, illuminated by soft, moody garage lighting. The focus is on the intricate stitching and precise assembly, conveying a sense of bespoke craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqvk8LpFy6jgxOPC34u6T49B1EWE5ZZrD2zKNc8A5FJPfjx8mcaOUSCj-uqwP4aSNo-qgF0LNYCDh9DRlyfK_3w1r3LrUfXc9XffNgrBX4TvTKW53cQPl5YuinorxAgY1qOQlFGwBWzdzeBo_gS-lOnPMGhrxpuBCTn8GUYIWFkgs27wf7sGEXlIOYmjoM-mvM20XMN3X2MaZDlIPPdtozaglW-o-Uyd6a7PwBjqe9p19UGtdayeCpWf5PySKgcjdqWFXqCwJf_uo"/>
+</div>
+<div class="relative z-10 p-8 md:p-12 h-full min-h-[400px] flex flex-col justify-end bg-gradient-to-t from-black/90 via-black/40 to-transparent">
+<div class="flex items-center space-x-3 mb-4">
+<span class="material-symbols-outlined text-on-surface" style="font-variation-settings: 'FILL' 0;">palette</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase">Customization</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-2xl mb-8">
+                                Tailor every detail to your exacting standards. From bespoke paint-to-sample finishes to personalized interior stitching and lightweight component integration. Your GT3, uniquely yours.
+                            </p>
+<button class="w-fit px-8 py-4 bg-transparent border border-outline-variant text-on-surface font-label-caps hover-shear racing-red-fill">
+<span class="">EXPLORE OPTIONS</span>
+</button>
+</div>
+</div>
+<!-- Layout Shift: Two Columns for Track Days & Maintenance -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Card 2: Track Days -->
+<div class="group relative overflow-hidden ghost-border bg-surface-container-low h-[500px] reveal-up active" id="track-days">
+<div class="absolute inset-0 z-0">
+<img alt="A dynamic action shot of a sleek sports car blurring past on a race track curve. The asphalt is textured, and red and white rumble strips are visible. The lighting suggests early morning or late afternoon with long shadows, conveying speed, adrenaline, and technical driving." class="w-full h-full object-cover object-center filter brightness-[0.4] group-hover:scale-105 transition-transform duration-1000 ease-out" data-alt="A dynamic action shot of a sleek sports car blurring past on a race track curve. The asphalt is textured, and red and white rumble strips are visible. The lighting suggests early morning or late afternoon with long shadows, conveying speed, adrenaline, and technical driving." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeCFmP7chWB_GpdANyXvLJNrYmM7DHYv7DeXf72mqYcBOaM98HKILWj4-5czNhENHzq3gKUVu0CR9o9U-YGwqAyyxkj-qPR63QwDidNU8SZJusNBmos5fxnYO9Fx2zCuqjCJl_PdjIRI1f_Ew48wcmPQ_JjKYp7RIw6jFRO09_GI5wwWCQA0wgZpRz9sPddoU5FBR_IhRURQAmV4qbNORe_1GUuRtLaw7eZRlBwKZzypDAecPS7vVqyxMbX3YLjkzY4y6XEcZZtjo"/>
+</div>
+<div class="relative z-10 p-8 flex flex-col justify-between h-full bg-gradient-to-b from-black/60 to-black/90">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-tertiary-container text-3xl" style="font-variation-settings: 'FILL' 1;">flag</span>
+<span class="font-label-caps text-outline-variant">02</span>
+</div>
+<div>
+<h2 class="font-subheading text-subheading text-on-surface uppercase mb-3">Track Days</h2>
+<p class="font-body-md text-on-surface-variant/80 mb-6 line-clamp-3">
+                                        Experience the true capability of your GT3. Expert coaching, telemetry analysis, and exclusive access to premier circuits worldwide.
+                                    </p>
+<a class="inline-flex items-center space-x-2 font-label-caps text-on-surface hover:text-on-tertiary-container transition-colors group/link" href="#">
+<span class="">BOOK SESSION</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Card 3: Precision Maintenance -->
+<div class="group relative overflow-hidden ghost-border bg-surface-container-low h-[500px] reveal-up active" id="maintenance">
+<div class="absolute inset-0 z-0 carbon-pattern opacity-50"></div>
+<div class="relative z-10 p-8 flex flex-col justify-between h-full bg-gradient-to-br from-surface-container-high/80 to-surface-container-lowest/90 backdrop-blur-sm">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-on-surface-variant text-3xl" style="font-variation-settings: 'FILL' 0;">build</span>
+<span class="font-label-caps text-outline-variant">03</span>
+</div>
+<div>
+<h2 class="font-subheading text-subheading text-on-surface uppercase mb-3">Precision Maintenance</h2>
+<p class="font-body-md text-on-surface-variant/80 mb-6">
+                                        Factory-certified technicians utilizing state-of-the-art diagnostics to ensure your vehicle operates at peak motorsport standards.
+                                    </p>
+<!-- Mini spec list -->
+<ul class="space-y-2 mb-8 border-t border-outline-variant/20 pt-4">
+<li class="flex justify-between text-[12px] font-label-caps">
+<span class="text-on-surface-variant/60">OIL SERVICE</span>
+<span class="text-on-surface">MOBIL 1 0W-40</span>
+</li>
+<li class="flex justify-between text-[12px] font-label-caps">
+<span class="text-on-surface-variant/60">INSPECTION</span>
+<span class="text-on-surface">111-POINT</span>
+</li>
+</ul>
+<a class="inline-flex items-center space-x-2 font-label-caps text-on-surface hover:text-on-tertiary-container transition-colors group/link" href="#">
+<span class="">SCHEDULE SERVICE</span>
+<span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer JSON Render -->
+<footer class="bg-surface-container-lowest dark:bg-black text-on-surface dark:text-on-surface-variant font-body-md text-body-md full-width relative border-t border-outline-variant/30 flat">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-20 max-w-container-max mx-auto">
+<!-- Brand/Copyright -->
+<div class="flex flex-col space-y-4">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tighter font-bold">PORSCHE 911 GT3</span>
+<p class="font-label-caps text-[10px] text-on-surface-variant/60 tracking-widest mt-auto pt-8">
+                    © 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col space-y-4 md:pl-12">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant/50 mb-2">EXPLORE</h4>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">About the GT3</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Quick Links</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Motorsport Heritage</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-caps text-label-caps text-on-surface-variant/50 mb-2">LEGAL</h4>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Legal Notice</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<!-- Intersection Observer for Scroll Animations -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal-up').forEach((el) => {
+                observer.observe(el);
+            });
+            
+            // Smooth scroll implementation for footer links based on JSON spec
+            document.querySelectorAll('footer a').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    // Only apply to empty hash links for demo purposes
+                    if(this.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Real-time Clock
+            function updateClock() {
+                const now = new Date();
+                const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+                const clockEl = document.getElementById('clock');
+                if(clockEl) clockEl.textContent = timeString;
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            // Theme Toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            const htmlEl = document.documentElement;
+            const icon = themeToggle.querySelector('.material-symbols-outlined');
+
+            themeToggle.addEventListener('click', () => {
+                htmlEl.classList.toggle('dark');
+                if(htmlEl.classList.contains('dark')) {
+                    icon.textContent = 'light_mode';
+                } else {
+                    icon.textContent = 'dark_mode';
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Porsche 911 GT3 - Contact</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts (Inter & JetBrains Mono for system matching) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#e2e2e2",
+                    "on-surface-variant": "#cfc4c5",
+                    "inverse-primary": "#5e5e5e",
+                    "surface-bright": "#393939",
+                    "secondary-fixed-dim": "#c4c7c8",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#410003",
+                    "surface-container": "#20201f",
+                    "primary-container": "#000000",
+                    "surface-dim": "#131313",
+                    "secondary": "#c4c7c8",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#b6b9ba",
+                    "on-tertiary": "#680008",
+                    "outline-variant": "#4c4546",
+                    "surface-tint": "#c6c6c6",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "outline": "#988e90",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed-variant": "#444748",
+                    "on-primary": "#303030",
+                    "surface": "#131313",
+                    "on-primary-fixed": "#1b1b1b",
+                    "tertiary-container": "#000000",
+                    "on-tertiary-fixed-variant": "#930010",
+                    "primary": "#c6c6c6",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#e71a26",
+                    "tertiary-fixed-dim": "#ffb3ac",
+                    "surface-container-highest": "#353535",
+                    "background": "#131313",
+                    "on-secondary-fixed": "#191c1d",
+                    "on-background": "#e5e2e1",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-variant": "#353535",
+                    "secondary-fixed": "#e0e3e4",
+                    "on-secondary": "#2d3132",
+                    "error-container": "#93000a",
+                    "tertiary": "#ffb3ac",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-primary-container": "#757575",
+                    "secondary-container": "#464a4b",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "stats-number": ["Metropolis", "sans-serif"],
+                    "display-xl": ["Metropolis", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "label-caps": ["JetBrains Mono", "monospace"],
+                    "headline-lg-mobile": ["Metropolis", "sans-serif"],
+                    "headline-lg": ["Metropolis", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "subheading": ["Metropolis", "sans-serif"]
+            },
+            "fontSize": {
+                    "stats-number": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                    "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                    "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "subheading": ["18px", { "lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Custom Utilities for Carbon Texture & Form resets */
+        .bg-carbon-texture {
+            background-color: #131313;
+            background-image: repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0px, rgba(255,255,255,0.02) 2px, transparent 2px, transparent 4px);
+        }
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active{
+            -webkit-box-shadow: 0 0 0 30px #2a2a2a inset !important;
+            -webkit-text-fill-color: #e5e2e1 !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-on-tertiary-container selection:text-surface-container-lowest">
+<!-- TopAppBar -->
+<header class="bg-surface-container-high/90 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-outline-variant/20 transition-all duration-300">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<!-- Brand -->
+<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-on-surface hover:text-on-surface-variant transition-colors" href="index.html">
+                PORSCHE 911 GT3
+            </a>
+<!-- Nav Desktop -->
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 rounded" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 rounded" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 rounded" href="about.html">About Us</a>
+<!-- Active State -->
+<a class="text-on-surface border-b-2 border-on-tertiary-container pb-1 font-label-caps text-label-caps hover:bg-on-surface-variant/10 px-2 rounded-t transition-colors" href="contact.html">Contact</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 rounded" href="signin.html">Sign In</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-2 py-1 rounded" href="signup.html">Sign Up</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<div class="hidden md:block font-label-caps text-label-caps text-on-surface-variant" id="real-time-clock">--:--:--</div>
+<button aria-label="Toggle Dark Mode" class="text-on-surface-variant hover:text-on-surface hover:bg-on-surface-variant/10 p-2 rounded-full transition-all duration-300 active:scale-95 flex" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow relative w-full overflow-hidden flex flex-col justify-center">
+<!-- Cinematic Background Texture / Image -->
+<div class="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-40 mix-blend-luminosity" data-alt="A cinematic, ultra-dark macro shot focusing on the rear wing and engine grille of a dark grey Porsche 911 GT3 parked in a shadowy studio. The lighting is incredibly low-key and dramatic, with a single sharp sliver of cool silver light grazing the carbon fiber weave and the metallic 'GT3' badge. The environment feels like an elite, high-performance machine testing facility. The overall mood is aggressive, highly technical, and sophisticated, utilizing a strict color palette of pure blacks, charcoal greys, and minimal stark white reflections." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCuuDihDpTrg_asc9ukMVemrOxlpw0Bd92hfAvldJg2ada_6UakLYnLXQBYlPgT6t4fXewHr_8te6CcriylL1QnP9kzXXhEl8aTI8s3wDg-7Eb6W6MhujvjWBUQMoAACRgk9aK1zQ6jOmNA7IEadEUBoEwC5wXojCqNg41Vt37S1Ireh5VUrfDbjhBKd6iVHipGc43nuB5CgTrnRTFUhtz-ZHIKeMuqCNleKQEl1twBHBp6jtPHpgyrTNgsG_ziGq8E46XtXsT_Vn8');">
+</div>
+<!-- Gradient Overlay for fade to background -->
+<div class="absolute inset-0 z-0 bg-gradient-to-b from-background/80 via-background/40 to-background pointer-events-none"></div>
+<div class="relative z-10 w-full max-w-container-max mx-auto px-gutter py-24 md:py-32 grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Header Column -->
+<div class="md:col-span-12 mb-12 md:mb-20">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-4 flex items-center gap-2">
+<span class="w-8 h-[1px] bg-on-tertiary-container block"></span>
+                    COMMUNICATIONS LINK
+                </p>
+<h1 class="font-display-xl text-4xl md:text-display-xl text-on-surface uppercase tracking-tighter leading-none">
+                    INITIATE<br/>
+<span class="text-surface-variant text-transparent bg-clip-text bg-gradient-to-r from-on-surface to-on-surface-variant">CONTACT</span>
+</h1>
+</div>
+<!-- Left: Contact Form (8 Col Span) -->
+<div class="md:col-span-8 bg-surface-container-high/60 backdrop-blur-2xl border border-outline-variant/20 p-8 md:p-12 relative overflow-hidden group">
+<!-- Subtle Carbon background for form -->
+<div class="absolute inset-0 bg-carbon-texture opacity-20 pointer-events-none"></div>
+<form class="relative z-10 flex flex-col gap-10" id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<!-- Input: Name -->
+<div class="relative flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="name">DRIVER IDENTIFICATION / NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant text-body-lg text-on-surface px-0 py-3 focus:ring-0 focus:border-on-tertiary-container transition-colors outline-none placeholder:text-on-surface-variant/30" id="name" name="name" placeholder="Enter full name" required="" type="text"/>
+</div>
+<!-- Input: Email -->
+<div class="relative flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="email">COMMS CHANNEL / EMAIL</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant text-body-lg text-on-surface px-0 py-3 focus:ring-0 focus:border-on-tertiary-container transition-colors outline-none placeholder:text-on-surface-variant/30" id="email" name="email" placeholder="name@domain.com" required="" type="email"/>
+</div>
+</div>
+<!-- Input: Subject -->
+<div class="relative flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="subject">TELEMETRY TYPE / SUBJECT</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant text-body-lg text-on-surface px-0 py-3 focus:ring-0 focus:border-on-tertiary-container transition-colors outline-none appearance-none cursor-pointer" id="subject" name="subject">
+<option class="bg-surface-container-high text-on-surface" value="allocation">Vehicle Allocation Inquiry</option>
+<option class="bg-surface-container-high text-on-surface" value="testdrive">Track Experience Request</option>
+<option class="bg-surface-container-high text-on-surface" value="service">Motorsport Service</option>
+<option class="bg-surface-container-high text-on-surface" value="other">Other Inquiry</option>
+</select>
+<!-- Custom Select Arrow -->
+<div class="absolute right-0 bottom-4 pointer-events-none text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+<!-- Input: Message -->
+<div class="relative flex flex-col">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2" for="message">TRANSMISSION / MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant text-body-lg text-on-surface px-0 py-3 focus:ring-0 focus:border-on-tertiary-container transition-colors outline-none resize-none placeholder:text-on-surface-variant/30" id="message" name="message" placeholder="Detail your inquiry..." required="" rows="4"></textarea>
+</div>
+<!-- Submit Action -->
+<div class="mt-4 flex justify-start">
+<button class="group/btn relative overflow-hidden bg-on-tertiary-container text-surface-container-lowest font-label-caps text-label-caps px-10 py-5 flex items-center gap-4 hover:shadow-[0_0_20px_rgba(231,26,38,0.3)] transition-shadow duration-300 border border-white/10" id="submit-btn" type="submit">
+<!-- Button Hover fill effect -->
+<div class="absolute inset-0 bg-white/10 translate-x-[-100%] group-hover/btn:translate-x-0 transition-transform duration-500 skew-x-[-20deg] origin-left z-0"></div>
+<span class="relative z-10 tracking-widest font-bold" id="submit-text">TRANSMIT DATA</span>
+<span class="material-symbols-outlined relative z-10 group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right: Telemetry/Info Sidebar (4 Col Span) -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<!-- Info Card 1 -->
+<div class="bg-surface-container/80 backdrop-blur-md border border-outline-variant/20 p-8 flex flex-col gap-6 relative overflow-hidden group hover:border-outline-variant/50 transition-colors">
+<div class="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-surface-variant/20 to-transparent pointer-events-none"></div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">location_on</span>
+<h3 class="font-label-caps text-label-caps">GLOBAL HQ</h3>
+</div>
+<div>
+<p class="font-body-lg text-on-surface leading-relaxed">
+                            Porscheplatz 1<br/>
+                            70435 Stuttgart-Zuffenhausen<br/>
+                            Germany
+                        </p>
+</div>
+</div>
+<!-- Info Card 2 -->
+<div class="bg-surface-container/80 backdrop-blur-md border border-outline-variant/20 p-8 flex flex-col gap-6 relative overflow-hidden group hover:border-outline-variant/50 transition-colors">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined text-xl">support_agent</span>
+<h3 class="font-label-caps text-label-caps">DIRECT COMMS</h3>
+</div>
+<div class="flex flex-col gap-2">
+<p class="font-stats-number text-stats-number text-on-surface">+49 (0) 711 911-0</p>
+<p class="font-body-md text-on-surface-variant">Mon-Fri, 0800-1800 CET</p>
+</div>
+<div class="h-[1px] w-full bg-outline-variant/20 my-2"></div>
+<div>
+<a class="font-label-caps text-label-caps text-on-tertiary-container hover:text-white transition-colors flex items-center gap-2" href="mailto:info@porsche.de">
+                            info@porsche.de
+                            <span class="material-symbols-outlined text-sm">north_east</span>
+</a>
+</div>
+</div>
+<!-- Visual Element -->
+<div class="flex-grow bg-carbon-texture border border-outline-variant/20 relative min-h-[120px] overflow-hidden flex items-center justify-center opacity-80">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest to-transparent"></div>
+<div class="font-display-xl text-4xl text-outline-variant/30 select-none tracking-tighter">GT3</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-black full-width relative border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-20 max-w-container-max mx-auto">
+<!-- Brand / Copyright -->
+<div class="flex flex-col justify-between gap-8">
+<span class="font-headline-lg text-headline-lg text-on-surface tracking-tighter">PORSCHE</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant">
+                    © 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-4 md:pl-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">About the GT3</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Quick Links</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Motorsport Heritage</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Legal Notice</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-all duration-200" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: document.querySelector(this.getAttribute('href') === '#' ? 'body' : this.getAttribute('href')).offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Real-time Clock
+        function updateClock() {
+            const now = new Date();
+            const clockEl = document.getElementById('real-time-clock');
+            if(clockEl) {
+                clockEl.textContent = now.toLocaleTimeString('en-US', { hour12: false }) + ' CET';
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Dark Mode Toggle
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+        const themeIcon = themeToggleBtn.querySelector('.material-symbols-outlined');
+
+        themeToggleBtn.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                themeIcon.textContent = 'light_mode';
+            } else {
+                themeIcon.textContent = 'dark_mode';
+            }
+        });
+
+        // Form Interactions
+        const form = document.getElementById('contact-form');
+        const submitBtnText = document.getElementById('submit-text');
+        
+        if(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const originalText = submitBtnText.textContent;
+                submitBtnText.textContent = 'DATA TRANSMITTED';
+                
+                setTimeout(() => {
+                    submitBtnText.textContent = originalText;
+                    form.reset();
+                }, 3000);
+            });
+        }
+    </script>
+</body></html>

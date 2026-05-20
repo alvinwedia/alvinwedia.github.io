@@ -1,13 +1,479 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
 
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PORSCHE 911 GT3 - Home</title>
+<script>
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else if (localStorage.theme === 'light') {
+        document.documentElement.classList.remove('dark');
+    }
+</script>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Metropolis:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#e2e2e2",
+                      "on-surface-variant": "#cfc4c5",
+                      "inverse-primary": "#5e5e5e",
+                      "surface-bright": "#393939",
+                      "secondary-fixed-dim": "#c4c7c8",
+                      "on-error": "#690005",
+                      "on-tertiary-fixed": "#410003",
+                      "surface-container": "#20201f",
+                      "primary-container": "#000000",
+                      "surface-dim": "#131313",
+                      "secondary": "#c4c7c8",
+                      "surface-container-high": "#2a2a2a",
+                      "on-secondary-container": "#b6b9ba",
+                      "on-tertiary": "#680008",
+                      "outline-variant": "#4c4546",
+                      "surface-tint": "#c6c6c6",
+                      "inverse-surface": "#e5e2e1",
+                      "inverse-on-surface": "#313030",
+                      "on-surface": "#e5e2e1",
+                      "outline": "#988e90",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed-variant": "#444748",
+                      "on-primary": "#303030",
+                      "surface": "#131313",
+                      "on-primary-fixed": "#1b1b1b",
+                      "tertiary-container": "#000000",
+                      "on-tertiary-fixed-variant": "#930010",
+                      "primary": "#c6c6c6",
+                      "tertiary-fixed": "#ffdad6",
+                      "on-tertiary-container": "#e71a26",
+                      "tertiary-fixed-dim": "#ffb3ac",
+                      "surface-container-highest": "#353535",
+                      "background": "#131313",
+                      "on-secondary-fixed": "#191c1d",
+                      "on-background": "#e5e2e1",
+                      "primary-fixed-dim": "#c6c6c6",
+                      "surface-variant": "#353535",
+                      "secondary-fixed": "#e0e3e4",
+                      "on-secondary": "#2d3132",
+                      "error-container": "#93000a",
+                      "tertiary": "#ffb3ac",
+                      "surface-container-low": "#1c1b1b",
+                      "on-error-container": "#ffdad6",
+                      "on-primary-fixed-variant": "#474747",
+                      "on-primary-container": "#757575",
+                      "secondary-container": "#464a4b",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "container-max": "1440px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px"
+              },
+              "fontFamily": {
+                      "stats-number": ["Metropolis", "sans-serif"],
+                      "display-xl": ["Metropolis", "sans-serif"],
+                      "body-md": ["Inter", "sans-serif"],
+                      "label-caps": ["JetBrains Mono", "monospace"],
+                      "headline-lg-mobile": ["Metropolis", "sans-serif"],
+                      "headline-lg": ["Metropolis", "sans-serif"],
+                      "body-lg": ["Inter", "sans-serif"],
+                      "subheading": ["Metropolis", "sans-serif"]
+              },
+              "fontSize": {
+                      "stats-number": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                      "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                      "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                      "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "subheading": ["18px", { "lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+              }
+            }
+          }
+        }
+      </script>
+<style>
+        body {
+            background-color: #131313; /* Fallback for white screen flash */
+            color: #e5e2e1;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .carbon-bg {
+            background-image: radial-gradient(theme('colors.outline-variant') 1px, transparent 1px);
+            background-size: 8px 8px;
+            background-color: theme('colors.surface-container');
+        }
+
+        .mesh-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            background: 
+                linear-gradient(rgba(19, 19, 19, 0.9), rgba(19, 19, 19, 0.9)),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(76, 69, 70, 0.05) 10px,
+                    rgba(76, 69, 70, 0.05) 20px
+                );
+            pointer-events: none;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .hero-zoom {
+            animation: kenburns 20s ease-out infinite alternate;
+        }
+
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.1); }
+        }
+
+        .slide-text {
+            display: none;
+            animation: slideUp 0.5s ease-out forwards;
+        }
+
+        .slide-text.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .ghost-border {
+            border: 1px solid rgba(166, 169, 170, 0.2);
+        }
+
+        .hud-glass {
+            background: rgba(42, 42, 42, 0.5);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col relative selection:bg-on-tertiary-container selection:text-white" style="background-color: #131313;">
+<div class="mesh-bg"></div>
+<!-- Top Bar with Clock -->
+<div class="w-full h-12 flex items-center justify-between px-gutter border-b border-outline-variant/20 bg-surface-container-lowest z-50 fixed top-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest">PORSCHE INTELLIGENT PERFORMANCE</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant" id="real-time-clock">00:00:00</span>
+</div>
+<!-- Navigation Bar (Shared Component) -->
+<nav class="bg-secondary-container/90 dark:bg-surface-container-high/90 backdrop-blur-xl border-b border-outline-variant/20 docked full-width top-12 sticky z-50 flat no shadows">
+<div class="flex justify-between items-center px-gutter py-unit*4 max-w-container-max mx-auto h-[72px]">
+<a class="font-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-on-surface dark:text-primary" href="./index.html">
+                PORSCHE 911 GT3
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface border-b-2 border-on-tertiary-container pb-1 font-label-caps text-label-caps hover:bg-on-surface-variant/10 transition-all duration-300" href="./index.html">Home</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300" href="./services.html">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300" href="./about.html">About Us</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300" href="./contact.html">Contact</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300" href="./signin.html">Sign In</a>
+<button class="bg-on-tertiary-container text-white px-6 py-2 rounded-none border inset-1 border-white/20 font-label-caps text-label-caps hover:translate-x-1 transition-transform duration-200" href="./signup.html" >Sign Up</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-primary dark:text-on-surface hover:bg-on-surface-variant/10 p-2 transition-all duration-300 rounded-full flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</button>
+<button class="md:hidden text-primary dark:text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-12">
+<!-- Hero Slider Section -->
+<section class="relative w-full h-[819px] overflow-hidden bg-black mt-0">
+<div class="absolute inset-0 z-0">
+<img alt="Porsche 911 GT3 on track" class="w-full h-full object-cover hero-zoom opacity-80" data-alt="A cinematic, high-contrast photograph of a silver Porsche 911 GT3 speeding on a race track at sunset. The lighting is dramatic, casting long shadows and highlighting the aerodynamic curves and carbon fiber details of the car. The background is a blur of motion, emphasizing extreme speed and performance. The mood is adrenaline-fueled, sophisticated, and elite, perfectly capturing the machine-human interface philosophy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgPY9JOuP8mE020tnnBIWI5RDwbSZjuUo3EngAsZU8umAzObUk4-lTZOlM1OCzUk0fl4mnXtoOiOspgs-hZ4gLWgYSkkKcBrFkVIAH33sk3-PN75pCD04UCc3LXXTz9y535vO_FxPgC0Q2Z0YWV0g7QFCmIKUxLZ7M9b_pyBL5IVWoA2wC7vHcwo4gSXlQNte68eo6BQmlQODsjwDyeCT3wqkqwohoFfusveT-tM85UJXQjUtD2CklRty2PAI9U5gndnEzIlECX-U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+</div>
+<div class="absolute bottom-20 left-0 w-full z-10 px-gutter max-w-container-max mx-auto">
+<div class="max-w-3xl">
+<div class="h-32 relative" id="hero-slider-text">
+<div class="slide-text active absolute top-0 left-0">
+<h1 class="font-display-xl text-display-xl text-white uppercase tracking-tighter mb-4">The Beast of <br/><span class="text-on-tertiary-container">Green Hell</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Nürburgring-honed aerodynamics meet naturally aspirated perfection.</p>
+</div>
+<div class="slide-text absolute top-0 left-0">
+<h1 class="font-display-xl text-display-xl text-white uppercase tracking-tighter mb-4">Pure Atmospheric <br/><span class="text-on-tertiary-container">Power</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">4.0-liter flat-six engine screaming to 9,000 RPM.</p>
+</div>
+<div class="slide-text absolute top-0 left-0">
+<h1 class="font-display-xl text-display-xl text-white uppercase tracking-tighter mb-4">Born in <br/><span class="text-on-tertiary-container">Flacht</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Motorsport technology transferred directly to the road.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Split Layout Section -->
+<section class="max-w-container-max mx-auto px-gutter py-[120px]">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Content: Editorial Cards -->
+<div class="lg:col-span-8 space-y-[80px]">
+<!-- Card 1: Aero -->
+<div class="fade-in-up group relative">
+<div class="absolute -inset-1 bg-gradient-to-r from-on-tertiary-container to-transparent opacity-0 group-hover:opacity-20 transition duration-500 blur-lg"></div>
+<div class="relative hud-glass ghost-border p-8 grid md:grid-cols-2 gap-8 items-center overflow-hidden">
+<div class="order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-on-tertiary-container mb-4 block">01 / AERODYNAMICS</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-6">Downforce Redefined</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">The swan-neck rear wing and striking diffuser deliver dramatically increased downforce for higher cornering speeds without increasing drag.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/30 pt-6">
+<div>
+<div class="font-stats-number text-stats-number text-primary">+150%</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Downforce vs Prev Gen</div>
+</div>
+<div>
+<div class="font-stats-number text-stats-number text-primary">Cd 0.34</div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Drag Coefficient</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 h-64 bg-surface-container relative overflow-hidden ghost-border">
+<img alt="GT3 Rear Wing" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" data-alt="Close-up detail shot of the carbon fiber swan-neck rear wing of a Porsche 911 GT3. The lighting is studio-quality, emphasizing the intricate weave of the carbon fiber and the precision engineering of the mounting hardware. The background is a stark, minimal studio dark room to isolate the component. The aesthetic is high-contrast, technical, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7qm36l4K0TpThxMhtLRTiPKna34bZddUkYUmjxH08zeJ7TAhg_JkQPoXAM8-9ily9jEZQnESLB0jJ5baPIbS0HyDh79qmO85Nspd2sZipINQBRoRFsFSR7uogQMKlQDv_7gQ4DBuW0v6oyva7vOrZZsgDBreCKN8bjRz0SmgLhiPnRYmDv_ZuBnFXlAiGruCMitbfIP2Cp3T5ZA85VDV9DRL81FSQ-rwsH-zUU2q3TyscUmx-CKqm1BxlDsGL3_v6HnEXibWWds4"/>
+</div>
+</div>
+</div>
+<!-- Card 2: Engine -->
+<div class="fade-in-up group relative">
+<div class="relative carbon-bg ghost-border p-8 grid md:grid-cols-2 gap-8 items-center overflow-hidden">
+<div class="h-64 bg-surface-container relative overflow-hidden ghost-border hidden md:block">
+<img alt="GT3 Engine" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 grayscale" data-alt="A highly stylized, top-down view of the 4.0-liter naturally aspirated flat-six engine of a Porsche 911 GT3. The image is treated with a cinematic, slightly desaturated, high-contrast look, resembling a blueprint or technical drawing come to life. Subtle metallic reflections highlight the machined precision of the engine block. The mood is raw and mechanical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUz-u9TulQOxuL_LJOF6Gu9rhIOBCGrtqqJsnjALUwZI5UPmL0DCW6-s3qUFoHYSDrPTGlZBWNfXuykDa5el_UdfgNAfCmi57b7Lq6nm6mMXUUhCkwwy8JyLwg1TJqb56JNnrayezq7QqLze48OI6gluAJC99POfB1sh3oyjPXgjRMplCStAcHsI-XN0ggDwDP_tVzWPnlZEIF_1i1HrIg6rFZ00MKn-fvHBP_scQYkC4YIom1xVQElRNbDijICZJpuPhFxcr6ItM"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-on-tertiary-container mb-4 block">02 / POWERTRAIN</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-white mb-6">Heart of a Racer</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">High-revving, naturally aspirated. The 4.0-litre six-cylinder horizontally opposed engine delivers pure, unfiltered emotion up to 9,000 rpm.</p>
+<div class="grid grid-cols-2 gap-4 border-t border-outline-variant/30 pt-6">
+<div>
+<div class="font-stats-number text-stats-number text-primary">510<span class="text-sm font-normal text-on-surface-variant ml-1">PS</span></div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Maximum Power</div>
+</div>
+<div>
+<div class="font-stats-number text-stats-number text-primary">3.4<span class="text-sm font-normal text-on-surface-variant ml-1">s</span></div>
+<div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">0-100 km/h</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar: Sticky Widgets -->
+<div class="lg:col-span-4 relative">
+<div class="sticky top-32 space-y-8">
+<!-- Telemetry Widget -->
+<div class="hud-glass ghost-border p-6">
+<h3 class="font-subheading text-subheading text-white border-b border-outline-variant/30 pb-4 mb-4 flex items-center justify-between">
+                                LIVE TELEMETRY
+                                <span class="material-symbols-outlined text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">speed</span>
+</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-low p-4 ghost-border">
+<div class="font-label-caps text-[10px] text-on-surface-variant mb-2">TOP SPEED</div>
+<div class="font-stats-number text-stats-number text-white">318 <span class="text-sm text-on-surface-variant">km/h</span></div>
+</div>
+<div class="bg-surface-container-low p-4 ghost-border">
+<div class="font-label-caps text-[10px] text-on-surface-variant mb-2">MAX RPM</div>
+<div class="font-stats-number text-stats-number text-on-tertiary-container">9000</div>
+</div>
+<div class="bg-surface-container-low p-4 ghost-border col-span-2 flex items-center justify-between">
+<div>
+<div class="font-label-caps text-[10px] text-on-surface-variant mb-1">TRACK MODE</div>
+<div class="font-body-md text-sm text-white">Engaged</div>
+</div>
+<div class="w-12 h-6 bg-on-tertiary-container rounded-full relative">
+<div class="absolute right-1 top-1 w-4 h-4 bg-white rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Categories Widget -->
+<div class="hud-glass ghost-border p-6">
+<h3 class="font-subheading text-subheading text-white border-b border-outline-variant/30 pb-4 mb-4">EXPLORE MORE</h3>
+<ul class="space-y-4">
+<li><a class="flex justify-between items-center group" href="./index.html">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-white transition-colors">CONFIGURATOR</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-white transition-colors transform group-hover:translate-x-1">arrow_forward</span>
+</a></li>
+<li class="border-t border-outline-variant/20 pt-4"><a class="flex justify-between items-center group" href="./index.html">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-white transition-colors">TECHNICAL SPECS</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-white transition-colors transform group-hover:translate-x-1">arrow_forward</span>
+</a></li>
+<li class="border-t border-outline-variant/20 pt-4"><a class="flex justify-between items-center group" href="./index.html">
+<span class="font-label-caps text-label-caps text-on-surface-variant group-hover:text-white transition-colors">MOTORSPORT HERITAGE</span>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-white transition-colors transform group-hover:translate-x-1">arrow_forward</span>
+</a></li>
+</ul>
+</div>
+<!-- Newsletter Widget -->
+<div class="carbon-bg ghost-border p-6">
+<h3 class="font-subheading text-subheading text-white mb-2">PORSCHE NEWSLETTER</h3>
+<p class="font-body-md text-sm text-on-surface-variant mb-6">Receive exclusive updates on new models and motorsport events.</p>
+<form class="flex flex-col gap-4" id="newsletter-form">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant text-white font-body-md placeholder-on-surface-variant focus:ring-0 focus:border-on-tertiary-container transition-colors py-2 px-0" placeholder="Your Email Address" required="" type="email"/>
+</div>
+<button class="bg-on-tertiary-container text-white px-6 py-3 font-label-caps text-label-caps hover:bg-white hover:text-black transition-colors duration-300 w-full flex justify-center items-center gap-2" type="submit">
+                                    SUBSCRIBE
+                                    <span class="material-symbols-outlined text-sm">mail</span>
+</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="bg-surface-container-lowest dark:bg-black border-t border-outline-variant/30 full-width relative">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-20 max-w-container-max mx-auto">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-on-surface uppercase tracking-tighter">
+                    PORSCHE AG
+                </div>
+<p class="font-body-md text-body-md text-on-surface dark:text-on-surface-variant">
+                    Precision engineering and visceral emotion of high-performance automotive excellence.
+                </p>
+<div class="font-label-caps text-label-caps text-on-surface-variant">
+                    © 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.
+                </div>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase">Links</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./about.html">About the GT3</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./index.html">Quick Links</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./index.html">Motorsport Heritage</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-caps text-label-caps text-white mb-6 uppercase">Legal</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./index.html">Legal Notice</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./index.html">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200 inline-block" href="./index.html">Cookie Policy</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Real-time clock
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false, hour: '2-digit', minute: '2-digit', second:'2-digit' });
+            const clockEl = document.getElementById('real-time-clock');
+            if (clockEl) {
+                clockEl.textContent = timeString;
+            }
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Hero Slider Text Rotation
+        const slides = document.querySelectorAll('.slide-text');
+        if (slides.length > 0) {
+            let currentSlide = 0;
+            function nextSlide() {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }
+            setInterval(nextSlide, 3000);
+        }
+
+        // Scroll Animation Observer
+        if ('IntersectionObserver' in window) {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.fade-in-up').forEach(el => {
+                observer.observe(el);
+            });
+        }
+
+        // Newsletter Form Alert
+        const newsletterForm = document.getElementById('newsletter-form');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Welcome to the Porsche Motorsport Newsletter. Your adrenaline fix is on its way.');
+                this.reset();
+            });
+        }
+
+        // Theme Toggle (with persistent storage to prevent flash)
+        const themeToggle = document.getElementById('theme-toggle');
+        if (themeToggle) {
+            themeToggle.addEventListener('click', function() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.theme = 'light';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.theme = 'dark';
+                }
+            });
+        }
+
+        // Smooth scroll for footer links
+        document.querySelectorAll('footer a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if(this.getAttribute('href') === './index.html' || this.getAttribute('href') === '#') {
+                    // Only scroll to top if it's acting as an anchor, otherwise let the relative link navigate.
+                    if (window.location.pathname.endsWith('index.html') || window.location.pathname === '/') {
+                         e.preventDefault();
+                         window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                }
+            });
+        });
+    </script>
+</body></html>

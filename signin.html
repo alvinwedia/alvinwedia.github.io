@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sign In | PORSCHE 911 GT3</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts (Approximations for Brand Typography) -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Montserrat:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e2e2e2",
+                        "on-surface-variant": "#cfc4c5",
+                        "inverse-primary": "#5e5e5e",
+                        "surface-bright": "#393939",
+                        "secondary-fixed-dim": "#c4c7c8",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed": "#410003",
+                        "surface-container": "#20201f",
+                        "primary-container": "#000000",
+                        "surface-dim": "#131313",
+                        "secondary": "#c4c7c8",
+                        "surface-container-high": "#2a2a2a",
+                        "on-secondary-container": "#b6b9ba",
+                        "on-tertiary": "#680008",
+                        "outline-variant": "#4c4546",
+                        "surface-tint": "#c6c6c6",
+                        "inverse-surface": "#e5e2e1",
+                        "inverse-on-surface": "#313030",
+                        "on-surface": "#e5e2e1",
+                        "outline": "#988e90",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#444748",
+                        "on-primary": "#303030",
+                        "surface": "#131313",
+                        "on-primary-fixed": "#1b1b1b",
+                        "tertiary-container": "#000000",
+                        "on-tertiary-fixed-variant": "#930010",
+                        "primary": "#c6c6c6",
+                        "tertiary-fixed": "#ffdad6",
+                        "on-tertiary-container": "#e71a26",
+                        "tertiary-fixed-dim": "#ffb3ac",
+                        "surface-container-highest": "#353535",
+                        "background": "#131313",
+                        "on-secondary-fixed": "#191c1d",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#c6c6c6",
+                        "surface-variant": "#353535",
+                        "secondary-fixed": "#e0e3e4",
+                        "on-secondary": "#2d3132",
+                        "error-container": "#93000a",
+                        "tertiary": "#ffb3ac",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#474747",
+                        "on-primary-container": "#757575",
+                        "secondary-container": "#464a4b",
+                        "error": "#ffb4ab"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "stats-number": ["Montserrat", "sans-serif"],
+                        "display-xl": ["Montserrat", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "label-caps": ["JetBrains Mono", "monospace"],
+                        "headline-lg-mobile": ["Montserrat", "sans-serif"],
+                        "headline-lg": ["Montserrat", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "subheading": ["Montserrat", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "stats-number": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "display-xl": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "subheading": ["18px", { "lineHeight": "24px", "letterSpacing": "0.05em", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<script>
+        // Theme init to prevent FOUC
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+<style>
+        /* Custom Utilities for Machine-Human Interface Feel */
+        .glass-panel {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ghost-border {
+            border: 1px solid rgba(166, 169, 170, 0.2);
+        }
+        /* Hide scrollbar for clean aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131313;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353535;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background antialiased flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-secondary-container/90 dark:bg-surface-container-high/90 backdrop-blur-xl border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-gutter py-unit*4 max-w-container-max mx-auto h-[48px]">
+<!-- Brand Logo -->
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg font-bold tracking-tighter text-primary dark:text-on-surface">
+                PORSCHE 911 GT3
+            </div>
+<!-- Navigation Links (Web) -->
+<nav class="hidden md:flex space-x-8 items-center h-full">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-3 py-1 rounded-DEFAULT duration-300" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-3 py-1 rounded-DEFAULT duration-300" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-3 py-1 rounded-DEFAULT duration-300" href="about.html">About Us</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-3 py-1 rounded-DEFAULT duration-300" href="contact.html">Contact</a>
+<!-- Active Link -->
+<a class="text-on-surface font-label-caps text-label-caps border-b-2 border-on-tertiary-container pb-1 h-full flex items-center scale-95 transition-transform" href="signin.html">Sign In</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 px-3 py-1 rounded-DEFAULT duration-300" href="signup.html">Sign Up</a>
+</nav>
+<!-- Trailing Icon Actions -->
+<div class="flex items-center space-x-4">
+<div class="font-label-caps text-label-caps text-on-surface-variant hidden md:block" id="real-time-clock"></div>
+<button class="text-primary dark:text-on-surface hover:bg-on-surface-variant/10 p-2 rounded-full transition-all duration-300 flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined" data-icon="dark_mode" id="theme-toggle-icon">dark_mode</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Canvas / Auth Section -->
+<main class="flex-grow relative flex items-center justify-center w-full bg-surface py-20 px-4 md:px-gutter">
+<!-- Cinematic Background -->
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-surface-container-lowest/80 to-surface-container-lowest/95 z-10 mix-blend-multiply"></div>
+<img alt="Cinematic background" class="w-full h-full object-cover object-center opacity-40 grayscale-[50%]" data-alt="A highly detailed, cinematic photograph of a high-performance sports car interior at night. The scene is illuminated by moody, low-key lighting with deep pure black shadows and subtle red glow from the instrument panel, reflecting a dark mode, machine-human interface design aesthetic. The composition emphasizes precision engineering, technical detail, and visceral emotion, utilizing vast negative space in the surrounding shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOrHcvGAFUoXyNMDfpRN-RK7E4j9lUuPi5DyJyJPHmk4oj_iQh8Yp94FYi7YvejoQZSbqATf6vIatK_mlo7Mb9qbFBiKO0KXNkJ9SXDnmYgyF4EO0APURAZ8a-1qKY9uXFmzG3tQrJDsrLvgOlOOX2Kr1FBA2Zc0b-zTeBOOpJ04BGiUHBa1SWkY0K5u-7jy5VZ7jcAbB0uZK_uDq1Q2s64LwUncosQN1P_kbV6ilAh-gfsQqteR6T5kzJPwoBtf_vj9iPUSxgmKc"/>
+</div>
+<!-- Authentication Card (Glassmorphism & Asymmetry) -->
+<div class="relative z-10 w-full max-w-[480px] bg-surface-container-high/40 glass-panel ghost-border p-8 md:p-12 shadow-2xl flex flex-col">
+<!-- Header -->
+<div class="mb-12">
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-2 tracking-tighter">AUTHENTICATION</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Initialize driver telemetry and secure access protocols.</p>
+</div>
+<!-- Form -->
+<form action="#" class="space-y-8 flex-grow" method="POST">
+<!-- Email Input -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-on-tertiary-container focus:ring-0 px-0 py-unit*2 font-body-lg text-body-lg text-on-surface placeholder-transparent transition-colors duration-300" id="email" name="email" placeholder="Driver ID (Email)" required="" type="email"/>
+<label class="absolute left-0 -top-6 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-2 peer-placeholder-shown:font-body-md peer-focus:-top-6 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-on-tertiary-container transition-all duration-300 pointer-events-none" for="email">
+                        DRIVER ID (EMAIL)
+                    </label>
+</div>
+<!-- Password Input -->
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant focus:border-on-tertiary-container focus:ring-0 px-0 py-unit*2 font-body-lg text-body-lg text-on-surface placeholder-transparent transition-colors duration-300" id="password" name="password" placeholder="Access Code" required="" type="password"/>
+<label class="absolute left-0 -top-6 font-label-caps text-label-caps text-on-surface-variant peer-placeholder-shown:text-body-lg peer-placeholder-shown:top-2 peer-placeholder-shown:font-body-md peer-focus:-top-6 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-on-tertiary-container transition-all duration-300 pointer-events-none" for="password">
+                        ACCESS CODE (PASSWORD)
+                    </label>
+<div class="absolute right-0 top-2 flex items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">FORGOT?</a>
+</div>
+</div>
+<!-- Primary CTA -->
+<div class="pt-8">
+<button class="w-full bg-on-tertiary-container text-surface-container-lowest border border-on-tertiary-container py-4 px-8 font-label-caps text-label-caps flex items-center justify-center group overflow-hidden relative transition-all duration-300" type="submit">
+<span class="relative z-10 tracking-widest font-bold">ENGAGE START</span>
+<div class="absolute inset-0 bg-surface-container-lowest translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-in-out z-0"></div>
+<span class="relative z-10 ml-3 material-symbols-outlined group-hover:translate-x-2 transition-transform duration-300 text-surface-container-lowest group-hover:text-on-tertiary-container" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+</button>
+</div>
+</form>
+<!-- Sign Up Link -->
+<div class="mt-12 pt-6 border-t border-outline-variant/30 text-center">
+<span class="font-body-md text-body-md text-on-surface-variant">No telemetry profile found?</span>
+<a class="ml-2 font-label-caps text-label-caps text-on-surface hover:text-on-tertiary-container transition-colors relative after:absolute after:bottom-0 after:left-0 after:h-[1px] after:w-full after:bg-on-tertiary-container after:origin-right after:scale-x-0 hover:after:scale-x-100 hover:after:origin-left after:transition-transform after:duration-300" href="signup.html">
+                    INITIALIZE CONFIGURATION
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full relative bg-surface-container-lowest dark:bg-black border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-20 max-w-container-max mx-auto">
+<!-- Brand / Copyright -->
+<div class="flex flex-col space-y-6">
+<div class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface font-bold tracking-tighter">
+                    PORSCHE 911 GT3
+                </div>
+<p class="font-label-caps text-label-caps text-on-surface-variant max-w-[280px]">
+                    © 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">About the GT3</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Quick Links</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Motorsport Heritage</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col space-y-4">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Legal Notice</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:translate-x-1 transition-transform duration-200" href="#">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<!-- Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Theme Toggle Logic
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeToggleIcon = document.getElementById('theme-toggle-icon');
+
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleIcon.textContent = 'light_mode';
+            } else {
+                themeToggleIcon.textContent = 'dark_mode';
+            }
+
+            themeToggleBtn.addEventListener('click', function() {
+                if (document.documentElement.classList.contains('dark')) {
+                    document.documentElement.classList.remove('dark');
+                    localStorage.setItem('color-theme', 'light');
+                    themeToggleIcon.textContent = 'dark_mode';
+                } else {
+                    document.documentElement.classList.add('dark');
+                    localStorage.setItem('color-theme', 'dark');
+                    themeToggleIcon.textContent = 'light_mode';
+                }
+            });
+
+            // Real-time Clock Logic
+            function updateClock() {
+                const clockElement = document.getElementById('real-time-clock');
+                if (clockElement) {
+                    const now = new Date();
+                    const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+                    clockElement.textContent = timeString + ' LOCAL';
+                }
+            }
+            setInterval(updateClock, 1000);
+            updateClock();
+
+            // Smooth scroll to top functionality could be added to footer links if needed
+            const footerLinks = document.querySelectorAll('footer a');
+            footerLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    if(link.getAttribute('href') === '#') {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Input focus effect for CTA button (optional subtle change when typing)
+            const inputs = document.querySelectorAll('input');
+            const ctaBtn = document.querySelector('button[type="submit"]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    if(document.getElementById('email').value && document.getElementById('password').value) {
+                        ctaBtn.classList.add('shadow-[0_0_15px_rgba(231,26,38,0.3)]');
+                    } else {
+                        ctaBtn.classList.remove('shadow-[0_0_15px_rgba(231,26,38,0.3)]');
+                    }
+                });
+            });
+        });
+    </script>
+</body></html>

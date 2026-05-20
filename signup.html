@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Porsche 911 GT3 - Driver Registration</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#e2e2e2",
+                    "on-surface-variant": "#cfc4c5",
+                    "inverse-primary": "#5e5e5e",
+                    "surface-bright": "#393939",
+                    "secondary-fixed-dim": "#c4c7c8",
+                    "on-error": "#690005",
+                    "on-tertiary-fixed": "#410003",
+                    "surface-container": "#20201f",
+                    "primary-container": "#000000",
+                    "surface-dim": "#131313",
+                    "secondary": "#c4c7c8",
+                    "surface-container-high": "#2a2a2a",
+                    "on-secondary-container": "#b6b9ba",
+                    "on-tertiary": "#680008",
+                    "outline-variant": "#4c4546",
+                    "surface-tint": "#c6c6c6",
+                    "inverse-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "on-surface": "#e5e2e1",
+                    "outline": "#988e90",
+                    "surface-container-lowest": "#0e0e0e",
+                    "on-secondary-fixed-variant": "#444748",
+                    "on-primary": "#303030",
+                    "surface": "#131313",
+                    "on-primary-fixed": "#1b1b1b",
+                    "tertiary-container": "#000000",
+                    "on-tertiary-fixed-variant": "#930010",
+                    "primary": "#c6c6c6",
+                    "tertiary-fixed": "#ffdad6",
+                    "on-tertiary-container": "#e71a26",
+                    "tertiary-fixed-dim": "#ffb3ac",
+                    "surface-container-highest": "#353535",
+                    "background": "#131313",
+                    "on-secondary-fixed": "#191c1d",
+                    "on-background": "#e5e2e1",
+                    "primary-fixed-dim": "#c6c6c6",
+                    "surface-variant": "#353535",
+                    "secondary-fixed": "#e0e3e4",
+                    "on-secondary": "#2d3132",
+                    "error-container": "#93000a",
+                    "tertiary": "#ffb3ac",
+                    "surface-container-low": "#1c1b1b",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-fixed-variant": "#474747",
+                    "on-primary-container": "#757575",
+                    "secondary-container": "#464a4b",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "container-max": "1440px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "stats-number": ["Metropolis", "sans-serif"],
+                    "display-xl": ["Metropolis", "sans-serif"],
+                    "body-md": ["Inter", "sans-serif"],
+                    "label-caps": ["JetBrains Mono", "monospace"],
+                    "headline-lg-mobile": ["Metropolis", "sans-serif"],
+                    "headline-lg": ["Metropolis", "sans-serif"],
+                    "body-lg": ["Inter", "sans-serif"],
+                    "subheading": ["Metropolis", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        @font-face {
+            font-family: 'Metropolis';
+            src: local('Helvetica Neue'), local('Arial');
+            font-weight: 700;
+        }
+        @font-face {
+            font-family: 'Metropolis';
+            src: local('Helvetica Neue'), local('Arial');
+            font-weight: 800;
+        }
+        
+        .carbon-pattern {
+            background-color: #131313;
+            background-image: 
+                linear-gradient(45deg, #1c1b1b 25%, transparent 25%, transparent 75%, #1c1b1b 75%, #1c1b1b),
+                linear-gradient(45deg, #1c1b1b 25%, transparent 25%, transparent 75%, #1c1b1b 75%, #1c1b1b);
+            background-size: 8px 8px;
+            background-position: 0 0, 4px 4px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased selection:bg-on-tertiary-container selection:text-white">
+<nav class="bg-secondary-container/90 dark:bg-surface-container-high/90 backdrop-blur-xl w-full sticky top-0 z-50 border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-gutter py-[16px] max-w-container-max mx-auto">
+<div class="font-headline-lg text-[32px] md:text-[48px] font-bold tracking-tighter text-on-surface dark:text-primary uppercase">
+                PORSCHE 911 GT3
+            </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant font-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300 px-3 py-2 text-[12px] tracking-[0.1em]" href="index.html">Home</a>
+<a class="text-on-surface-variant font-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300 px-3 py-2 text-[12px] tracking-[0.1em]" href="services.html">Services</a>
+<a class="text-on-surface-variant font-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300 px-3 py-2 text-[12px] tracking-[0.1em]" href="about.html">About Us</a>
+<a class="text-on-surface-variant font-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300 px-3 py-2 text-[12px] tracking-[0.1em]" href="contact.html">Contact</a>
+<a class="text-on-surface-variant font-label-caps hover:text-on-surface transition-colors hover:bg-on-surface-variant/10 duration-300 px-3 py-2 text-[12px] tracking-[0.1em]" href="signin.html">Sign In</a>
+<a class="text-on-surface border-b-2 border-on-tertiary-container pb-1 active:scale-95 transition-transform font-label-caps px-3 py-2 text-[12px] tracking-[0.1em]" href="signup.html">Sign Up</a>
+<div class="h-4 w-px bg-outline-variant/50 mx-2 hidden lg:block"></div>
+<div class="text-on-surface-variant font-label-caps text-[12px] tracking-[0.1em] hidden lg:block" id="real-time-clock"></div>
+<button class="hover:bg-on-surface-variant/10 p-2 rounded-full transition-all duration-300 ml-4 flex items-center justify-center" id="theme-toggle">
+<span class="material-symbols-outlined text-primary dark:text-on-surface" id="theme-icon" style="font-variation-settings: 'FILL' 0;">dark_mode</span>
+</button>
+</div>
+</div>
+</nav>
+<main class="flex-grow flex flex-col md:flex-row w-full max-w-container-max mx-auto relative">
+<div class="hidden md:flex md:w-7/12 relative bg-surface-container overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-transparent via-background/20 to-background z-10 pointer-events-none"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent z-10 pointer-events-none opacity-80"></div>
+<div class="w-full h-full bg-cover bg-center scale-105 hover:scale-100 transition-transform duration-[10s] ease-out" data-alt="A highly cinematic, dark mode editorial shot of a Porsche 911 GT3 rear quarter panel and wing. The vehicle is finished in a metallic silver that reflects cool, harsh industrial light, contrasting with deep, pitch-black shadows. Carbon fiber textures on the wing are sharply in focus. The scene evokes a sense of intense speed, precision engineering, and elite performance, adhering to a stark, machine-human interface aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBpc7_NgJKgaKDdwIlSm8B47G9bwk1kz5XzkGF4MIQtKJaTvLcGhlaEgBfzqSSkTUTKF6Mmz-w0OONRHBux-1YmWlQxjObCwysjap2fKBgCa4FSkxxo0G-g6B2ucQKVvurJ1w4AhOmNaHRVFH977C8g9fX2Qycac7rakOXa7grjAou7akei5yFX2gswy0xz3DZF9J4sFrtmbsfBcXlZtVVuEsDJmJ7G61l_qWvdZ0R5bm24joKCSpGV5H76uYIpBU22joKUYnryqfo');">
+</div>
+<div class="absolute bottom-margin-desktop left-margin-desktop z-20 font-label-caps text-on-surface-variant/60 flex gap-8 text-[12px] tracking-[0.1em]">
+<div>
+<span class="block text-on-surface mb-1">ENGINE</span>
+<span>4.0L FLAT-SIX</span>
+</div>
+<div>
+<span class="block text-on-surface mb-1">POWER</span>
+<span>502 HP</span>
+</div>
+<div>
+<span class="block text-on-surface mb-1">0-60 MPH</span>
+<span>3.2 SEC</span>
+</div>
+</div>
+</div>
+<div class="w-full md:w-5/12 bg-background flex flex-col justify-center items-center p-margin-mobile md:p-margin-desktop relative z-20 carbon-pattern">
+<div class="absolute inset-0 bg-background/90 backdrop-blur-[2px] z-0"></div>
+<div class="w-full max-w-md relative z-10 p-8 border border-outline-variant/20 bg-surface-container-lowest/80 backdrop-blur-xl shadow-2xl">
+<div class="mb-12">
+<p class="font-label-caps text-[12px] text-on-tertiary-container tracking-[0.2em] mb-3 uppercase flex items-center gap-2">
+<span class="w-4 h-[1px] bg-on-tertiary-container inline-block"></span>
+                        Driver Registration
+                    </p>
+<h1 class="font-headline-lg text-[32px] md:text-[40px] leading-[1.1] text-on-surface tracking-tighter uppercase">
+                        Initialize<br/><span class="text-on-surface-variant">Sequence</span>
+</h1>
+</div>
+<form class="space-y-8">
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 text-body-lg text-on-surface focus:ring-0 focus:border-on-tertiary-container transition-all duration-300 placeholder-transparent font-body-md" id="fullname" placeholder="Full Name" required="" type="text"/>
+<label class="absolute left-0 -top-4 text-on-surface-variant/70 font-label-caps text-[10px] transition-all duration-300 peer-placeholder-shown:text-[12px] peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-on-tertiary-container uppercase tracking-wider cursor-text" for="fullname">
+                            Full Name
+                        </label>
+</div>
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 text-body-lg text-on-surface focus:ring-0 focus:border-on-tertiary-container transition-all duration-300 placeholder-transparent font-body-md" id="email" placeholder="Email Address" required="" type="email"/>
+<label class="absolute left-0 -top-4 text-on-surface-variant/70 font-label-caps text-[10px] transition-all duration-300 peer-placeholder-shown:text-[12px] peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-on-tertiary-container uppercase tracking-wider cursor-text" for="email">
+                            Email Address
+                        </label>
+</div>
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 text-body-lg text-on-surface focus:ring-0 focus:border-on-tertiary-container transition-all duration-300 placeholder-transparent font-body-md" id="password" placeholder="Password" required="" type="password"/>
+<label class="absolute left-0 -top-4 text-on-surface-variant/70 font-label-caps text-[10px] transition-all duration-300 peer-placeholder-shown:text-[12px] peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-on-tertiary-container uppercase tracking-wider cursor-text" for="password">
+                            Password
+                        </label>
+</div>
+<div class="relative group">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant/40 py-3 px-0 text-body-lg text-on-surface focus:ring-0 focus:border-on-tertiary-container transition-all duration-300 placeholder-transparent font-body-md" id="confirm_password" placeholder="Confirm Password" required="" type="password"/>
+<label class="absolute left-0 -top-4 text-on-surface-variant/70 font-label-caps text-[10px] transition-all duration-300 peer-placeholder-shown:text-[12px] peer-placeholder-shown:top-3 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-on-tertiary-container uppercase tracking-wider cursor-text" for="confirm_password">
+                            Confirm Password
+                        </label>
+</div>
+<div class="pt-6">
+<button class="w-full bg-on-tertiary-container text-white font-label-caps text-[12px] tracking-[0.1em] py-5 border border-white/20 hover:-skew-x-[6deg] hover:bg-on-tertiary-fixed-variant transition-all duration-300 flex justify-center items-center gap-3 relative overflow-hidden group/btn shadow-[0_0_15px_rgba(231,26,38,0.2)] hover:shadow-[0_0_25px_rgba(231,26,38,0.4)]" type="button">
+<span class="relative z-10 uppercase font-semibold">Commence Ignition</span>
+<span class="material-symbols-outlined relative z-10 text-[18px] group-hover/btn:translate-x-1 transition-transform" style="font-variation-settings: 'FILL' 0;">arrow_forward</span>
+<div class="absolute inset-0 bg-white/10 -translate-x-full group-hover/btn:translate-x-0 transition-transform duration-500 ease-out skew-x-[12deg] w-[150%] left-[-25%]"></div>
+</button>
+</div>
+</form>
+</div>
+</div>
+</main>
+<footer class="bg-surface-container-lowest dark:bg-black full-width relative border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-gutter py-[80px] max-w-container-max mx-auto">
+<div>
+<div class="font-headline-lg text-[32px] md:text-[48px] text-on-surface tracking-tighter uppercase font-bold mb-6">
+                    PORSCHE 911 GT3
+                </div>
+<p class="font-label-caps text-[12px] text-on-surface-variant tracking-[0.1em] uppercase">
+                    © 2024 PORSCHE AG. MOTORSPORT HERITAGE. ALL RIGHTS RESERVED.
+                </p>
+</div>
+<div class="md:col-span-2 flex flex-wrap gap-x-12 gap-y-4 md:justify-end items-start mt-8 md:mt-0">
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="about.html">About the GT3</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="links.html">Quick Links</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="heritage.html">Motorsport Heritage</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="legal.html">Legal Notice</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="privacy.html">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-on-surface font-label-caps text-[12px] tracking-[0.1em] uppercase hover:translate-x-1 transition-transform duration-200" href="cookie.html">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<script>
+    // Dark mode toggle functionality
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or system preference
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        htmlElement.classList.add('dark');
+        if(themeIcon) themeIcon.textContent = 'light_mode';
+    } else {
+        htmlElement.classList.remove('dark');
+        if(themeIcon) themeIcon.textContent = 'dark_mode';
+    }
+
+    if(themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', function() {
+            if (htmlElement.classList.contains('dark')) {
+                htmlElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                if(themeIcon) themeIcon.textContent = 'dark_mode';
+            } else {
+                htmlElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                if(themeIcon) themeIcon.textContent = 'light_mode';
+            }
+        });
+    }
+
+    // Real-time clock functionality
+    function updateClock() {
+        const now = new Date();
+        const timeString = now.toLocaleTimeString();
+        const clockElement = document.getElementById('real-time-clock');
+        if (clockElement) {
+            clockElement.textContent = timeString;
+        }
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+</body></html>
