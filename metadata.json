@@ -1,0 +1,6 @@
+{
+  "name": "Porsche 911 GT3 Experience",
+  "description": "An immersive digital showcase and customizable driver studio for the legendary Porsche 911 GT3 (992), featuring motorsport heritage, interactive engineering metrics, and a secure driver registry.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
